@@ -19,7 +19,7 @@ const Project = () => {
         </h1>
        <div>
        <Image
-            src="/1.jpg"
+            src="/unama.jpg"
             width={1000}
             height={50}
             alt="nextjs"
