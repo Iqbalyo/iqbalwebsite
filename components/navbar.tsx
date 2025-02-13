@@ -73,14 +73,11 @@ export function NavBar() {
         </NavigationMenu>
 
         <div className="flex items-center gap-2 max-[825px]:hidden">
-          <Link href="/home-page/about-page">
-            <Button variant="ghost">About me</Button>
+          <Link href="/home-page/project-page">
+            <Button variant="ghost">Project</Button>
           </Link>
           <Link href="/home-page/skill-page">
             <Button variant="ghost">Skill</Button>
-          </Link>
-          <Link href="/home-page/skill-page">
-            <Button variant="ghost">Project</Button>
           </Link>
 
           <ModeToggle />

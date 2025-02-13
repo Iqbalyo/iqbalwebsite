@@ -11,9 +11,8 @@ export default function Home() {
     <Main>
       <Section>
         <Container>
-         <Hero />
-         <Project/>
          <AboutPage />
+         <Project/>
          <FeatureRight />
     
          

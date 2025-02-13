@@ -23,18 +23,13 @@ const AboutPage = () => {
           />
         </div>
         <div className="flex flex-col gap-6 py-8">
-          <h3 className="!my-0">About me</h3>
+          <h3 className="!my-0">Hello! I am iqbal mustakim</h3>
           <p className="font-light leading-[1.4] opacity-70">
-            &quot;Hello! I am a Junior Front-End Web Developer with a background in
-            Information Systems. I have hands-on experience with HTML, CSS,
-            JavaScript, Bootstrap, Laravel, and Next.js. My goal is to
-            specialize and advance in front-end development, continually
-            enhancing user experiences through innovative design and efficient
-            coding practices.&quot;
+            &quot;A Junior Front-End Developer with a strong foundation in modern web technologies, including HTML, CSS, JavaScript, Bootstrap, Laravel, and Next.js. Passionate about creating seamless user experiences and optimizing web performance. While my focus is on front-end development, I am eager to leverage my knowledge of backend frameworks to contribute to fullstack projects.&quot;
           </p>
           <div className="not-prose flex items-center gap-2">
             <Button className="w-fit" asChild>
-              <Link href="#">Get Started</Link>
+              <Link href="https://www.linkedin.com/in/iqbalmustakim">Linkedin</Link>
             </Button>
             <Button className="w-fit" variant="link" asChild>
               <Link href="#">
