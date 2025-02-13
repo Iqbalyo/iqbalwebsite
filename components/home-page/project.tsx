@@ -17,21 +17,25 @@ const Project = () => {
         <h1 className="!mb-0">
           <Balancer>Project</Balancer>
         </h1>
-       <div>
-       <Image
-            src="/unama.jpg"
-            width={500}
-            height={50}
-            alt="nextjs"
-            className="fill object-cover"
-          />
-       </div>
+        <div>
+          <Link
+            href="https://fe-deploy-olive.vercel.app/login"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/unama.jpg"
+              width={500}
+              height={50}
+              alt="nextjs"
+              className="rounded-lg object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+            />
+          </Link>
+        </div>
         <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>
             <Link href="/">
-           
-              website monitoring aktivitas mahasiswa
-              universitas dinamika bangsa
+              website monitoring aktivitas mahasiswa universitas dinamika bangsa
             </Link>
           </Button>
         </div>
