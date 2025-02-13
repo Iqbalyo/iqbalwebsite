@@ -20,7 +20,7 @@ const Project = () => {
        <div>
        <Image
             src="/unama.jpg"
-            width={1000}
+            width={500}
             height={50}
             alt="nextjs"
             className="fill object-cover"
