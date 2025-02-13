@@ -48,7 +48,7 @@ export function NavBar() {
               <DialogClose asChild>
                 <Link href="/home-page/skill-page">
                   <Button variant="outline" className="w-full">
-                    Skill dan
+                    Skill
                   </Button>
                 </Link>
               </DialogClose>
@@ -70,7 +70,7 @@ export function NavBar() {
             <Button variant="ghost">About me</Button>
           </Link>
           <Link href="/home-page/skill-page">
-            <Button variant="ghost">Skill</Button>
+            <Button variant="ghost">Skillmuu</Button>
           </Link>
 
           <ModeToggle />
