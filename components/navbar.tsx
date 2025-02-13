@@ -52,6 +52,13 @@ export function NavBar() {
                   </Button>
                 </Link>
               </DialogClose>
+              <DialogClose asChild>
+                <Link href="/home-page/skill-page">
+                  <Button variant="outline" className="w-full">
+                    Project
+                  </Button>
+                </Link>
+              </DialogClose>
 
               <ModeToggle />
             </div>
@@ -70,7 +77,10 @@ export function NavBar() {
             <Button variant="ghost">About me</Button>
           </Link>
           <Link href="/home-page/skill-page">
-            <Button variant="ghost">Skillmuu</Button>
+            <Button variant="ghost">Skill</Button>
+          </Link>
+          <Link href="/home-page/skill-page">
+            <Button variant="ghost">Project</Button>
           </Link>
 
           <ModeToggle />
