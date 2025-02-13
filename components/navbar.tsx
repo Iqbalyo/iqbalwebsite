@@ -30,7 +30,7 @@ export function NavBar() {
           </SheetTrigger>
           <SheetContent side="left">
             <SheetHeader>
-              <SheetTitle>iqbalkoeko.</SheetTitle>
+              <SheetTitle>iqbal.</SheetTitle>
               <SheetDescription>
                 Scale and launch products with expert developers, on-demand, at
                 a flat monthly fee
@@ -48,7 +48,7 @@ export function NavBar() {
               <DialogClose asChild>
                 <Link href="/home-page/skill-page">
                   <Button variant="outline" className="w-full">
-                    Skill
+                    Skill dan
                   </Button>
                 </Link>
               </DialogClose>
