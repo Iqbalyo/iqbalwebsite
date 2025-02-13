@@ -15,7 +15,7 @@ const Project = () => {
     <Section>
       <Container className="flex flex-col items-center text-center">
         <h1 className="!mb-0">
-          <Balancer>Website Monitoring Mahasiswa</Balancer>
+          <Balancer>Project</Balancer>
         </h1>
        <div>
        <Image
@@ -29,8 +29,9 @@ const Project = () => {
         <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>
             <Link href="/">
-              <Camera className="mr-2" />
-              Let&apos;s Connect
+           
+              website monitoring aktivitas mahasiswa
+              universitas dinamika bangsa
             </Link>
           </Button>
         </div>
