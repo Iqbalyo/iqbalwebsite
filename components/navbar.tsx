@@ -30,7 +30,7 @@ export function NavBar() {
           </SheetTrigger>
           <SheetContent side="left">
             <SheetHeader>
-              <SheetTitle>iqbal.</SheetTitle>
+              <SheetTitle>iqbalkoeko.</SheetTitle>
               <SheetDescription>
                 Scale and launch products with expert developers, on-demand, at
                 a flat monthly fee
