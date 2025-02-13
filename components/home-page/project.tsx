@@ -1,6 +1,6 @@
 // React and Next.js imports
 import Link from "next/link";
-
+import Image from "next/image";
 
 // Third-party library imports
 import Balancer from "react-wrap-balancer";
@@ -15,14 +15,17 @@ const Project = () => {
     <Section>
       <Container className="flex flex-col items-center text-center">
         <h1 className="!mb-0">
-          <Balancer>Junior Front-End Web</Balancer>
+          <Balancer>Website Monitoring Mahasiswa</Balancer>
         </h1>
-        <h3 className="text-muted-foreground">
-          <Balancer>
-            Passionate about learning and improving web development skills to
-            deliver functional and engaging user experiences
-          </Balancer>
-        </h3>
+       <div>
+       <Image
+            src="/1.jpg"
+            width={1000}
+            height={50}
+            alt="nextjs"
+            className="fill object-cover"
+          />
+       </div>
         <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>
             <Link href="/">
