@@ -15,7 +15,7 @@ const AboutPage = () => {
       <Craft.Container className="grid items-stretch md:grid-cols-2 md:gap-12">
         <div className="not-prose relative flex h-96 overflow-hidden rounded-lg border">
           <Image
-            src="/done.jpg"
+            src="/done.png"
             width={1000}
             height={50}
             alt="nextjs"
