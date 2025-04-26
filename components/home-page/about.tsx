@@ -7,7 +7,7 @@ import * as Craft from "@/components/craft";
 import { Button } from "@/components/ui/button";
 
 // Asset imports
-import Placeholder from "@/public/placeholder.webp";
+
 
 const AboutPage = () => {
   return (
@@ -15,7 +15,7 @@ const AboutPage = () => {
       <Craft.Container className="grid items-stretch md:grid-cols-2 md:gap-12">
         <div className="not-prose relative flex h-96 overflow-hidden rounded-lg border">
           <Image
-            src="/profile.jpg"
+            src="/done.jpg"
             width={1000}
             height={50}
             alt="nextjs"
