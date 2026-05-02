@@ -67,7 +67,7 @@ const Project = () => {
 
         {/* Carousel Viewport - Dibuat max-w-full biar panjang kalau di desktop */}
         <div className="overflow-hidden w-full max-w-5xl cursor-grab active:cursor-grabbing" ref={emblaRef}>
-          <div className="flex gap-4"> 
+          <div className="flex gap-4 w-max"> 
             {PROJECTS.map((project, index) => (
               // Lebar card dibuat tetap (370px) biar pas di mobile & web
               <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0">

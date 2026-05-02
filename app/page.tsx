@@ -28,9 +28,9 @@ const fadeUp: Variants = {
 
 export default function Home() {
   return (
-    <Main>
+    <Main w-full overflow-x-hidden>
       <Section>
-        <Container className="px-4 md:px-0">
+        <Container className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 1. About Section */}
           <motion.div
             initial="hidden"
