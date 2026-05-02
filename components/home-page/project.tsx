@@ -71,7 +71,7 @@ const Project = () => {
             {PROJECTS.map((project, index) => (
               // Lebar card dibuat tetap (370px) biar pas di mobile & web
               <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
-                <div className="group h-full overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+                <div className="group h-full overflow-hidden rounded-2xl border shadow-sm transition-all duration-300 hover:shadow-xl">
                   
                   {/* Image */}
                   <div className="relative aspect-video overflow-hidden">
