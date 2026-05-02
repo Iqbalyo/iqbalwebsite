@@ -13,13 +13,13 @@ import { Button } from "@/components/ui/button";
 // Data Project - Tinggal tambah di sini kalau ada project baru
 const PROJECTS = [
   {
-    title: "Website Monitoring Mahasiswa UNAMA",
-    image: "/unama.jpg",
+    title: "Mobile Website App Tryout",
+    image: "/lory.jpg",
     link: "https://fe-deploy-olive.vercel.app/login",
   },
   {
     title: "Project Keren Kedua",
-    image: "/project2.jpg", // Pastiin file ada di folder public
+    image: "/lory.jpg", // Pastiin file ada di folder public
     link: "https://link-project-2.com",
   },
 ];
@@ -27,7 +27,7 @@ const PROJECTS = [
 const Project = () => {
   // Setup Embla dengan Autoplay
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true }),
+    Autoplay({ delay: 1200, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
 
   return (
@@ -50,8 +50,8 @@ const Project = () => {
                   >
                     <Image
                       src={project.image}
-                      width={500}
-                      height={300}
+                      width={370}
+                      height={200}
                       alt={project.title}
                       className="rounded-lg object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg"
                     />
