@@ -1,4 +1,4 @@
-"use client"; // Wajib karena pake hook & interaksi
+"use client";
 
 import * as React from "react";
 import Link from "next/link";
@@ -8,26 +8,25 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 import { Section, Container } from "@/components/craft";
-import { Button } from "@/components/ui/button";
 
-// Data Project - Tinggal tambah di sini kalau ada project baru
 const PROJECTS = [
   {
     title: "Mobile Website App Tryout",
     image: "/lory.jpg",
     link: "https://fe-deploy-olive.vercel.app/login",
+    description: "Platform latihan soal interaktif untuk persiapan ujian."
   },
   {
     title: "Project Keren Kedua",
-    image: "/lory.jpg", // Pastiin file ada di folder public
+    image: "/lory.jpg",
     link: "https://link-project-2.com",
+    description: "Deskripsi singkat project kedua lu di sini bre."
   },
 ];
 
 const Project = () => {
-  // Setup Embla dengan Autoplay
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 1200, stopOnInteraction: false, stopOnMouseEnter: true }),
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
 
   return (
@@ -37,34 +36,42 @@ const Project = () => {
           <Balancer>Selected Projects</Balancer>
         </h1>
 
-        {/* Viewport Carousel */}
-        <div className="overflow-hidden w-full max-w-2xl cursor-grab active:cursor-grabbing" ref={emblaRef}>
+        <div className="overflow-hidden w-full max-w-lg cursor-grab active:cursor-grabbing" ref={emblaRef}>
           <div className="flex">
             {PROJECTS.map((project, index) => (
               <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
-                <div className="flex flex-col items-center">
-                  <Link
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                {/* Wrapper Card Utama */}
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                >
+                  {/* Bagian Gambar */}
+                  <div className="relative aspect-video overflow-hidden">
                     <Image
                       src={project.image}
-                      width={370}
-                      height={200}
+                      fill
                       alt={project.title}
-                      className="rounded-lg object-cover transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                  </Link>
-                  
-                  <div className="not-prose mt-6 flex gap-2 md:mt-8">
-                    <Button asChild>
-                      <Link href={project.link} target="_blank">
-                        {project.title}
-                      </Link>
-                    </Button>
                   </div>
-                </div>
+
+                  {/* Bagian Teks (Keterangan) */}
+                  <div className="p-6 text-left">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    {project.description && (
+                      <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+                        {project.description}
+                      </p>
+                    )}
+                    <div className="mt-4 text-xs font-medium text-blue-500 flex items-center gap-1">
+                      View Project <span>→</span>
+                    </div>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
