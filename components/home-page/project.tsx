@@ -70,52 +70,55 @@ const Project = () => {
           <div className="flex ml-[-1rem]"> 
             {PROJECTS.map((project, index) => (
               // Lebar card dibuat tetap (370px) biar pas di mobile & web
-              <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
-                <div className="group h-full overflow-hidden rounded-2xl border shadow-sm transition-all duration-300 hover:shadow-xl">
-                  
-                  {/* Image */}
-                  <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src={project.image}
-                      fill
-                      alt={project.title}
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
+            <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
+  <div className="group h-full overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+    
+    {/* 1. IMAGE: Full Width & Full Top (Tanpa Gap Putih) */}
+    <div className="relative aspect-video w-full overflow-hidden">
+      <Image
+        src={project.image}
+        fill
+        alt={project.title}
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
 
-                  {/* Content */}
-                  <div className="p-6 text-left">
-                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
-                      {project.title}
-                    </h3>
+    {/* 2. CONTENT: Dikasih container/padding sendiri biar teksnya gak nempel ke pinggir */}
+    <div className="p-6"> 
+      <div className="text-left">
+        <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+          {project.title}
+        </h3>
 
-                    <p className="mt-2 text-sm text-gray-600 line-clamp-2">
-                      {project.description}
-                    </p>
+        <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+          {project.description}
+        </p>
 
-                    {/* Tech Badges */}
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {project.tech.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="text-[10px] uppercase tracking-wider font-semibold bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+        {/* Tech Badges */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.tech.map((tech, i) => (
+            <span
+              key={i}
+              className="text-[10px] uppercase tracking-wider font-semibold bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
 
-                    <Link
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-5 inline-flex items-center text-xs font-bold text-blue-500 hover:gap-2 transition-all"
-                    >
-                      VIEW PROJECT <span className="ml-1">→</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+        <Link
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 inline-flex items-center text-xs font-bold text-blue-500 hover:gap-2 transition-all"
+        >
+          VIEW PROJECT <span className="ml-1">→</span>
+        </Link>
+      </div>
+    </div>
+
+  </div>
+</div>
             ))}
           </div>
         </div>
