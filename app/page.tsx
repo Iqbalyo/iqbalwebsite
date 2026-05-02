@@ -9,12 +9,16 @@ import Hero from "@/components/home-page/hero";
 import Project from "@/components/home-page/project";
 
 // Variabel settingan animasi biar gak ngetik berulang
+// Ganti bagian ini di page.tsx lu
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
+    transition: { 
+      duration: 0.6, 
+      ease: [0.22, 1, 0.36, 1] // Pakai cubic-bezier biar lebih smooth dan aman di TS
+    } 
   },
 };
 
