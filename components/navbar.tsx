@@ -46,7 +46,7 @@ export function NavBar() {
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="#about">
+                <Link href="#skill">
                   <Button variant="outline" className="w-full">
                     Skill
                   </Button>
