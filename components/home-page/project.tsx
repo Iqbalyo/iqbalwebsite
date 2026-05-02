@@ -15,7 +15,7 @@ const PROJECTS = [
     image: "/lory.jpg",
     link: "https://fe-deploy-olive.vercel.app/login",
     description: "Platform latihan soal interaktif untuk persiapan ujian.",
-    tech: ["Next.js", "Laravel", "Tailwind"],
+    tech: ["Laravel 10", "Tailwind"],
   },
   {
     title: "Public Speaking Class",
@@ -51,7 +51,7 @@ const Project = () => {
     [
       AutoScroll({ 
         playOnInit: true, 
-        speed: 0.7, // Atur kecepatan di sini (makin kecil makin pelan/smooth)
+        speed: 0.30, // Atur kecepatan di sini (makin kecil makin pelan/smooth)
         stopOnInteraction: false, // Tetap jalan setelah di-drag user
         stopOnMouseEnter: true, // Berhenti pas kursor nempel (sesuai request lu)
       })
@@ -62,15 +62,15 @@ const Project = () => {
     <Section>
       <Container className="flex flex-col items-center text-center">
         <h1 className="mb-10 text-3xl font-bold">
-          <Balancer>Selected Projects</Balancer>
+          <Balancer>Proyek dan sertifikat</Balancer>
         </h1>
 
         {/* Carousel Viewport - Dibuat max-w-full biar panjang kalau di desktop */}
         <div className="overflow-hidden w-full max-w-5xl cursor-grab active:cursor-grabbing" ref={emblaRef}>
-          <div className="flex gap-4"> 
+          <div className="flex ml-[-1rem]"> 
             {PROJECTS.map((project, index) => (
               // Lebar card dibuat tetap (370px) biar pas di mobile & web
-              <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0">
+              <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
                 <div className="group h-full overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
                   
                   {/* Image */}
