@@ -34,7 +34,7 @@ const AboutPage = () => {
 
           {/* Button Group - Dibikin rapi di Mobile */}
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
-            <Button className="px-8" asChild>
+            <Button className="w-full sm:w-fit bg-[#0077b5] hover:bg-[#005582] text-white border-none px-8" asChild>
               <Link href="https://www.linkedin.com/in/iqbalmustakim">
                 Linkedin
               </Link>
