@@ -33,7 +33,7 @@ export default function Home() {
         <Container className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 1. About Section */}
           <motion.div
-          className="pt-24 md:pt-32"
+          className="pt-24 md:pt-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
