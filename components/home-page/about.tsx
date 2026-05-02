@@ -33,7 +33,7 @@ const AboutPage = () => {
             </Button>
             <Button className="w-fit" variant="link" asChild>
               <Link href="#">
-                Ex Dicoding Front end web Batch 6 Kampus merdeka -&gt;
+                Ex Dicoding Oke Front end web Batch 6 Kampus merdeka -&gt;
               </Link>
             </Button>
           </div>
