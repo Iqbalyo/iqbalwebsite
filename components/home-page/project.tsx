@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll"; // Import plugin baru
 
 import { Section, Container } from "@/components/craft";
 
@@ -18,84 +18,60 @@ const PROJECTS = [
     tech: ["Next.js", "Laravel", "Tailwind"],
   },
   {
-    title: "Project Keren Kedua",
+    title: "Public Speaking Class",
+    image: "/pub.jpg",
+    link: "#",
+    description: "Project dokumentasi kegiatan public speaking.",
+    tech: ["Communication"],
+  },
+  {
+    title: "Professional Certification",
     image: "/sertif1.jpg",
-    link: "https://link-project-2.com",
-    description: "Deskripsi singkat project kedua lu di sini bre.",
+    link: "#",
+    description: "Sertifikasi keahlian IT tingkat nasional.",
     tech: ["React", "Express", "MongoDB"],
   },
-
-   {
-    title: "Project Keren Kedua",
-    image: "/sertif1.jpg",
-    link: "https://link-project-2.com",
-    description: "Deskripsi singkat project kedua lu di sini bre.",
-    tech: ["React", "Express", "MongoDB"],
-  },
-   {
-    title: "Project Keren Kedua",
-    image: "/sertif1.jpg",
-    link: "https://link-project-2.com",
-    description: "Deskripsi singkat project kedua lu di sini bre.",
-    tech: ["React", "Express", "MongoDB"],
-  },
-   {
-    title: "Project Keren Kedua",
-    image: "/sertif1.jpg",
-    link: "https://link-project-2.com",
-    description: "Deskripsi singkat project kedua lu di sini bre.",
-    tech: ["React", "Express", "MongoDB"],
+  {
+    title: "Advanced Web Project",
+    image: "/ser2.jpg",
+    link: "#",
+    description: "Pengembangan sistem database terintegrasi.",
+    tech: ["React", "PostgreSql"],
   },
 ];
 
 const Project = () => {
-  // 🔥 FIX: bikin autoplay stabil (gak recreate terus)
-  const autoplay = React.useRef(
-    Autoplay({
-      delay: 4000,
-      stopOnInteraction: false, // penting biar tetap jalan
-      stopOnMouseEnter: true,
-    })
+  // Setup AutoScroll
+  const [emblaRef] = useEmblaCarousel(
+    { 
+      loop: true, 
+      dragFree: true, // Biar user bisa geser bebas (gak kaku per slide)
+      align: "start"
+    },
+    [
+      AutoScroll({ 
+        playOnInit: true, 
+        speed: 0.7, // Atur kecepatan di sini (makin kecil makin pelan/smooth)
+        stopOnInteraction: false, // Tetap jalan setelah di-drag user
+        stopOnMouseEnter: true, // Berhenti pas kursor nempel (sesuai request lu)
+      })
+    ]
   );
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true },
-    [autoplay.current]
-  );
-
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-  React.useEffect(() => {
-    if (!emblaApi) return;
-
-    const onSelect = () => {
-      setSelectedIndex(emblaApi.selectedScrollSnap());
-    };
-
-    emblaApi.on("select", onSelect);
-    onSelect();
-
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi]);
 
   return (
     <Section>
       <Container className="flex flex-col items-center text-center">
-        <h1 className="mb-8">
+        <h1 className="mb-10 text-3xl font-bold">
           <Balancer>Selected Projects</Balancer>
         </h1>
 
-        {/* Carousel */}
-        <div
-          className="overflow-hidden w-full max-w-lg cursor-grab active:cursor-grabbing"
-          ref={emblaRef}
-        >
-          <div className="flex">
+        {/* Carousel Viewport - Dibuat max-w-full biar panjang kalau di desktop */}
+        <div className="overflow-hidden w-full max-w-5xl cursor-grab active:cursor-grabbing" ref={emblaRef}>
+          <div className="flex gap-4"> 
             {PROJECTS.map((project, index) => (
-              <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
-                <div className="group overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              // Lebar card dibuat tetap (370px) biar pas di mobile & web
+              <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0">
+                <div className="group h-full overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
                   
                   {/* Image */}
                   <div className="relative aspect-video overflow-hidden">
@@ -103,15 +79,13 @@ const Project = () => {
                       src={project.image}
                       fill
                       alt={project.title}
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
                   </div>
 
                   {/* Content */}
                   <div className="p-6 text-left">
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
                       {project.title}
                     </h3>
 
@@ -119,47 +93,31 @@ const Project = () => {
                       {project.description}
                     </p>
 
-                    {/* Tech */}
-                    <div className="mt-3 flex flex-wrap gap-2">
+                    {/* Tech Badges */}
+                    <div className="mt-4 flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="text-xs bg-gray-100 px-2 py-1 rounded"
+                          className="text-[10px] uppercase tracking-wider font-semibold bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
 
-                    {/* Link */}
                     <Link
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center text-xs font-medium text-blue-500 hover:underline"
+                      className="mt-5 inline-flex items-center text-xs font-bold text-blue-500 hover:gap-2 transition-all"
                     >
-                      View Project →
+                      VIEW PROJECT <span className="ml-1">→</span>
                     </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Dots */}
-        <div className="flex gap-2 mt-6">
-          {PROJECTS.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => emblaApi?.scrollTo(index)}
-              className={`h-2 w-2 rounded-full transition-all ${
-                index === selectedIndex
-                  ? "bg-blue-500 w-4"
-                  : "bg-gray-300"
-              }`}
-            />
-          ))}
         </div>
       </Container>
     </Section>
