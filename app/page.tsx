@@ -1,6 +1,7 @@
 "use client"; // Wajib karena animasi itu butuh client-side
 
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { Container, Main, Section } from "@/components/craft";
 import AboutPage from "@/components/home-page/about";
 import FeatureRight from "@/components/home-page/skill";
@@ -10,15 +11,18 @@ import Project from "@/components/home-page/project";
 
 // Variabel settingan animasi biar gak ngetik berulang
 // Ganti bagian ini di page.tsx lu
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { 
-      duration: 0.6, 
-      ease: [0.22, 1, 0.36, 1] // Pakai cubic-bezier biar lebih smooth dan aman di TS
-    } 
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut", // ✅ jangan array dulu, ini paling aman
+    },
   },
 };
 
