@@ -27,20 +27,14 @@ const SkillPage = () => {
               Skill & Development tools
        </Balancer>
           </h3>
-          <div className="mt-6 grid grid-cols-2 gap-6 md:mt-12 md:grid-cols-4 items-center justify-items-center">
-          <div className="flex justify-center p-4">
-              <Image src="/nextjs-icon.svg" width={80} height={40} alt="Next.js" className="grayscale hover:grayscale-0 transition"/>
-            </div>
-            <div className="flex justify-center p-4">
-              <Image src="/html5.svg" width={80} height={40} alt="Next.js" className="grayscale hover:grayscale-0 transition"/>
-            </div>
-            <div className="flex justify-center p-4">
-            <Image src="/lara.svg" width={80} height={40} alt="Next.js" className="grayscale hover:grayscale-0 transition" />
-            </div>
-            <div className="flex justify-center p-4">
-            <Image src="/bootsrap.svg" width={80} height={40} alt="Next.js" className="grayscale hover:grayscale-0 transition"/>
-            </div>
-            </div>
+        <div className="mt-6 grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 place-items-center">
+  
+  <Image src="/nextjs-icon.svg" width={80} height={40} alt="Next.js" />
+  <Image src="/html5.svg" width={80} height={40} alt="HTML5" />
+  <Image src="/lara.svg" width={80} height={40} alt="laravel" />
+  <Image src="/bootsrap.svg" width={80} height={40} alt="Bootstrap" />
+
+</div>
          
         </div>
       </Container>
