@@ -72,7 +72,7 @@ const Project = () => {
         >
           <div className="flex">
             {PROJECTS.map((project, index) => (
-              <div key={index} className="flex-[0_0_100%] min-w-0">
+              <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
                 <div className="group overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   
                   {/* Image */}
