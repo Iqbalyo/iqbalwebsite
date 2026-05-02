@@ -27,13 +27,19 @@ const PROJECTS = [
 ];
 
 const Project = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+  // 🔥 FIX: bikin autoplay stabil (gak recreate terus)
+  const autoplay = React.useRef(
     Autoplay({
       delay: 4000,
-      stopOnInteraction: true,
+      stopOnInteraction: false, // penting biar tetap jalan
       stopOnMouseEnter: true,
-    }),
-  ]);
+    })
+  );
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true },
+    [autoplay.current]
+  );
 
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
@@ -78,8 +84,6 @@ const Project = () => {
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-
-                    {/* Overlay Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
                   </div>
 
@@ -89,13 +93,11 @@ const Project = () => {
                       {project.title}
                     </h3>
 
-                    {project.description && (
-                      <p className="mt-2 text-sm text-gray-600 line-clamp-2">
-                        {project.description}
-                      </p>
-                    )}
+                    <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+                      {project.description}
+                    </p>
 
-                    {/* Tech Stack */}
+                    {/* Tech */}
                     <div className="mt-3 flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span
@@ -107,7 +109,7 @@ const Project = () => {
                       ))}
                     </div>
 
-                    {/* Link Button (biar gak ganggu swipe) */}
+                    {/* Link */}
                     <Link
                       href={project.link}
                       target="_blank"
@@ -123,7 +125,7 @@ const Project = () => {
           </div>
         </div>
 
-        {/* Indicator Dots */}
+        {/* Dots */}
         <div className="flex gap-2 mt-6">
           {PROJECTS.map((_, index) => (
             <button
