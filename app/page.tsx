@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Main>
       <Section>
-        <Container>
+        <Container className="px-4 md:px-0">
           {/* 1. About Section */}
           <motion.div
             initial="hidden"

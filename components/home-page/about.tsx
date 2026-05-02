@@ -27,16 +27,14 @@ const AboutPage = () => {
           <p className="font-light leading-[1.4] opacity-70">
             &quot;A Junior Front-End Developer with a strong foundation in modern web technologies, including HTML, CSS, JavaScript, Bootstrap, Laravel, and Next.js. Passionate about creating seamless user experiences and optimizing web performance. While my focus is on front-end development, I am eager to leverage my knowledge of backend frameworks to contribute to fullstack projects.&quot;
           </p>
-          <div className="not-prose flex items-center gap-2">
-            <Button className="w-fit" asChild>
-              <Link href="https://www.linkedin.com/in/iqbalmustakim">Linkedin</Link>
-            </Button>
-            <Button className="w-fit" variant="link" asChild>
-              <Link href="#">
-                Ex Dicoding Oke Front end web Batch 6 Kampus merdeka -&gt;
-              </Link>
-            </Button>
-          </div>
+          <div className="not-prose relative flex h-64 md:h-96 overflow-hidden rounded-lg border">
+  <Image
+    src="/done.png"
+    fill // ✅ Pakai fill biar responsive
+    alt="Iqbal Mustakim"
+    className="object-cover"
+  />
+</div>
         </div>
       </Craft.Container>
     </Craft.Section>

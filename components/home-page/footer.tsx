@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer>
       <Section>
-        <Container className="grid gap-12 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
+        <Container className="grid gap-12 grid-cols-1 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
           <div className="grid gap-6">
             <Link href="/">
               <h3 className="sr-only">brijr/components</h3>
