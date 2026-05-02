@@ -45,7 +45,7 @@ export default function Footer() {
     <img 
       src="/sertif1.jpg" 
       alt="Product"
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover block"
     />
   </div>
 
