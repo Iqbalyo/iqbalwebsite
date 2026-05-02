@@ -1,55 +1,55 @@
-// React and Next.js imports
+// About.tsx
 import Image from "next/image";
 import Link from "next/link";
-
-// UI component imports
 import * as Craft from "@/components/craft";
 import { Button } from "@/components/ui/button";
 
-// Asset imports
-
-
 const AboutPage = () => {
   return (
-    <Craft.Section className="pt-24 pb-12 sm:pt-28 sm:pb-16">
-      <div className="grid items-stretch gap-6 md:grid-cols-2 md:gap-12">
-  
-  {/* Image */}
-  <div className="not-prose relative flex h-60 sm:h-72 md:h-96 overflow-hidden rounded-lg border">
-    <Image
-      src="/done.png"
-      fill
-      alt="nextjs"
-      className="object-cover"
-    />
-  </div>
+    <div className="py-8 md:py-12"> {/* Pakai div biasa buat kontrol padding */}
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12">
+        
+        {/* Sisi Kiri: Image - Dikecilkan dikit biar gak makan tempat di HP */}
+        <div className="not-prose relative aspect-square w-full max-w-[300px] mx-auto md:max-w-full md:h-96 overflow-hidden rounded-2xl border shadow-sm">
+          <Image
+            src="/done.png"
+            fill
+            alt="Iqbal Mustakim"
+            className="object-cover"
+            priority
+          />
+        </div>
 
-  {/* Content */}
-  <div className="flex flex-col gap-4 py-4 sm:py-6 md:py-8 text-center md:text-left">
-    <h3 className="!my-0 text-xl sm:text-2xl">
-      Hello! I am iqbal mustakim
-    </h3>
+        {/* Sisi Kanan: Content */}
+        <div className="flex flex-col gap-5 text-center md:text-left">
+          <h3 className="text-2xl font-bold md:text-3xl lg:text-4xl">
+            Hello! I am Iqbal Mustakim
+          </h3>
 
-    <p className="text-sm sm:text-base font-light leading-relaxed opacity-70">
-      ...seorang web dev pemulaa
-    </p>
+          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base md:max-w-[90%]">
+            &quot;A Junior Front-End Developer with a strong foundation in modern web technologies, 
+            including HTML, CSS, JavaScript, Bootstrap, Laravel, and Next.js. 
+            Passionate about creating seamless user experiences.&quot;
+          </p>
 
-    <div className="not-prose flex flex-col sm:flex-row items-center md:items-start gap-2">
-      <Button className="w-full sm:w-fit" asChild>
-        <Link href="https://www.linkedin.com/in/iqbalmustakim">
-          Linkedin
-        </Link>
-      </Button>
+          {/* Button Group - Dibikin rapi di Mobile */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
+            <Button className="px-8" asChild>
+              <Link href="https://www.linkedin.com/in/iqbalmustakim">
+                Linkedin
+              </Link>
+            </Button>
 
-      <Button className="w-full sm:w-fit" variant="link" asChild>
-        <Link href="#">
-          Ex Dicoding Oke Front end web Batch 6 Kampus merdeka →
-        </Link>
-      </Button>
+            <Button variant="ghost" className="text-xs sm:text-sm h-auto py-2" asChild>
+              <Link href="#" className="flex items-center gap-1">
+                Ex Dicoding Front-End <span className="hidden sm:inline">Batch 6</span> →
+              </Link>
+            </Button>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-</div>
-    </Craft.Section>
   );
 };
 
