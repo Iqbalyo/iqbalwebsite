@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 const AboutPage = () => {
   return (
-    <Craft.Section>
+    <Craft.Section className="pt-24 pb-12 sm:pt-28 sm:pb-16">
       <div className="grid items-stretch gap-6 md:grid-cols-2 md:gap-12">
   
   {/* Image */}
@@ -31,7 +31,7 @@ const AboutPage = () => {
     </h3>
 
     <p className="text-sm sm:text-base font-light leading-relaxed opacity-70">
-      ...
+      ...seorang web dev pemulaa
     </p>
 
     <div className="not-prose flex flex-col sm:flex-row items-center md:items-start gap-2">
