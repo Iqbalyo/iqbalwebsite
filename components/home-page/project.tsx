@@ -19,7 +19,29 @@ const PROJECTS = [
   },
   {
     title: "Project Keren Kedua",
-    image: "/lory.jpg",
+    image: "/sertif1.jpg",
+    link: "https://link-project-2.com",
+    description: "Deskripsi singkat project kedua lu di sini bre.",
+    tech: ["React", "Express", "MongoDB"],
+  },
+
+   {
+    title: "Project Keren Kedua",
+    image: "/sertif1.jpg",
+    link: "https://link-project-2.com",
+    description: "Deskripsi singkat project kedua lu di sini bre.",
+    tech: ["React", "Express", "MongoDB"],
+  },
+   {
+    title: "Project Keren Kedua",
+    image: "/sertif1.jpg",
+    link: "https://link-project-2.com",
+    description: "Deskripsi singkat project kedua lu di sini bre.",
+    tech: ["React", "Express", "MongoDB"],
+  },
+   {
+    title: "Project Keren Kedua",
+    image: "/sertif1.jpg",
     link: "https://link-project-2.com",
     description: "Deskripsi singkat project kedua lu di sini bre.",
     tech: ["React", "Express", "MongoDB"],
