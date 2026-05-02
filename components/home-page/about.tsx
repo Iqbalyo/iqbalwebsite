@@ -48,7 +48,7 @@ const AboutPage = () => {
       </Button>
     </div>
   </div>
-</Craft.Container>
+</div>
     </Craft.Section>
   );
 };
