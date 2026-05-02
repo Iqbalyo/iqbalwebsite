@@ -79,7 +79,7 @@ const Project = () => {
                       src={project.image}
                       fill
                       alt={project.title}
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105 rounded-2xl"
                     />
                   </div>
 
@@ -119,7 +119,7 @@ const Project = () => {
             ))}
           </div>
         </div>
-        
+
       </Container>
     </Section>
   );
