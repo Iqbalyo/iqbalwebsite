@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const AboutPage = () => {
   return (
-    <div className="py-8 md:py-12"> {/* Pakai div biasa buat kontrol padding */}
+    <div id="about" className="py-8 md:py-12"> {/* Pakai div biasa buat kontrol padding */}
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12">
         
         {/* Sisi Kiri: Image - Dikecilkan dikit biar gak makan tempat di HP */}

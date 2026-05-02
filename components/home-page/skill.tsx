@@ -21,7 +21,7 @@ const SkillPage = () => {
   return (
     <Section className="border-b">
       <Container className="not-prose">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6" id="skill">
           <h3 className="text-4xl">
             <Balancer>
               Skill & Development tools

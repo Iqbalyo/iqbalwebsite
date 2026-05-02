@@ -39,21 +39,21 @@ export function NavBar() {
 
             <div className="flex flex-col space-y-3 mt-[1rem] z-[99]">
               <DialogClose asChild>
-                <Link href="/home-page/about-page">
+                <Link href="#about">
                   <Button variant="outline" className="w-full">
                     About me
                   </Button>
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="/home-page/skill-page">
+                <Link href="#about">
                   <Button variant="outline" className="w-full">
                     Skill
                   </Button>
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="/home-page/project-page">
+                <Link href="#project">
                   <Button variant="outline" className="w-full">
                     Project
                   </Button>
@@ -73,12 +73,15 @@ export function NavBar() {
         </NavigationMenu>
 
         <div className="flex items-center gap-2 max-[825px]:hidden">
-          <Link href="/home-page/project-page">
+          <Link href="#project">
             <Button variant="ghost">Project</Button>
           </Link>
-          <Link href="/home-page/skill-page">
+          <Link href="#skill">
             <Button variant="ghost">Skill</Button>
           </Link>
+          <Link href="#about">
+      <Button variant="ghost">About</Button>
+    </Link>
 
           <ModeToggle />
         </div>
@@ -98,7 +101,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >

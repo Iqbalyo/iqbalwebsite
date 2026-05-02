@@ -82,7 +82,7 @@ const Project = () => {
   );
 
   return (
-    <Section>
+    <Section id="project">
       <Container className="flex flex-col items-center text-center">
         <h1 className="mb-10 text-3xl font-bold">
           <Balancer>Proyek dan Sertifikat</Balancer>
