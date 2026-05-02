@@ -38,6 +38,28 @@ export default function Footer() {
               <a href="https://github.com/brijr/components">brijr/components</a>
               . All rights reserved. 2024-present.
             </p>
+            <br />
+            <div className="w-64 bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+
+  <div className="w-full h-48">
+    <img 
+      src="https://via.placeholder.com/300x300" 
+      alt="Product"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+
+  <div className="p-4">
+    <h3 className="text-sm font-semibold text-gray-800 line-clamp-2">
+      iPhone 14 Pro 128GB Deep Purple
+    </h3>
+
+    <p className="mt-2 text-lg font-bold text-green-600">
+      Rp 18.999.000
+    </p>
+  </div>
+</div>
           </div>
           <div className="flex flex-col gap-2">
           
