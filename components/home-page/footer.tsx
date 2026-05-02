@@ -43,7 +43,7 @@ export default function Footer() {
 
   <div className="w-full h-48">
     <img 
-      src="https://via.placeholder.com/300x300" 
+      src="/sertif1.jpg" 
       alt="Product"
       className="w-full h-full object-cover"
     />
