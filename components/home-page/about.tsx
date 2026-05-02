@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 const AboutPage = () => {
   return (
     <Craft.Section>
-      <Craft.Container className="grid items-stretch gap-6 md:grid-cols-2 md:gap-12">
+      <div className="grid items-stretch gap-6 md:grid-cols-2 md:gap-12">
   
   {/* Image */}
   <div className="not-prose relative flex h-60 sm:h-72 md:h-96 overflow-hidden rounded-lg border">
