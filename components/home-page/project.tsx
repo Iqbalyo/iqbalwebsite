@@ -67,7 +67,7 @@ const Project = () => {
 
         {/* Carousel */}
         <div
-          className="overflow-hidden w-full max-w-lg mx-auto px-4 cursor-grab active:cursor-grabbing"
+          className="overflow-hidden w-full max-w-lg cursor-grab active:cursor-grabbing"
           ref={emblaRef}
         >
           <div className="flex">
