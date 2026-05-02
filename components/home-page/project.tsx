@@ -67,12 +67,12 @@ const Project = () => {
 
         {/* Carousel */}
         <div
-          className="overflow-hidden w-full max-w-lg cursor-grab active:cursor-grabbing"
+          className="overflow-hidden w-full max-w-lg mx-auto px-4 cursor-grab active:cursor-grabbing"
           ref={emblaRef}
         >
           <div className="flex">
             {PROJECTS.map((project, index) => (
-              <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
+              <div key={index} className="flex-[0_0_100%] min-w-0">
                 <div className="group overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   
                   {/* Image */}
