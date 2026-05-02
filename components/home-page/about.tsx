@@ -27,9 +27,7 @@ const AboutPage = () => {
           </h3>
 
           <p className="text-sm leading-relaxed text-muted-foreground sm:text-base md:max-w-[90%]">
-            &quot;A Junior Front-End Developer with a strong foundation in modern web technologies, 
-            including HTML, CSS, JavaScript, Bootstrap, Laravel, and Next.js. 
-            Passionate about creating seamless user experiences.&quot;
+            &quot;Fullstack Developer • 2+ tahun • Instruktur IT.&quot;
           </p>
 
           {/* Button Group - Dibikin rapi di Mobile */}
