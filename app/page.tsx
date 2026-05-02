@@ -12,7 +12,7 @@ export default function Home() {
       <Section>
         <Container>
          <AboutPage />
-         <Project/>
+         
          <FeatureRight />
     
          
