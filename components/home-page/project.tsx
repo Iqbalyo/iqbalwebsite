@@ -98,24 +98,24 @@ const Project = () => {
               const finalLink = isProject ? project.link : DEFAULT_CERT_LINK;
 
               return (
-        <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
-  {/* Card utama dengan overflow-hidden agar gambar yang nempel ke atas otomatis terpotong sudutnya */}
+       <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
+  {/* Container utama harus punya overflow-hidden biar gambar yang nempel ke atas terpotong radiusnya */}
   <div className="group h-full overflow-hidden rounded-[24px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10">
     
-    {/* 📸 IMAGE AREA: Hapus Padding (p-4) agar nempel ke pinggir atas, kiri, dan kanan */}
+    {/* 📸 IMAGE AREA: Hapus semua padding (p-3/p-4) agar gambar nempel ke atas, kiri, dan kanan */}
     <div className="relative aspect-video w-full overflow-hidden">
       <Image
         src={project.image}
         fill
         alt={project.title}
         className="object-cover transition-transform duration-700 group-hover:scale-110"
-        // object-cover memastikan gambar memenuhi seluruh kotak tanpa ada background abu-abu
+        // object-cover hukumnya WAJIB bre biar gambar lu nge-zoom dikit buat nutupin area putih itu
       />
     </div>
 
-    {/* 📝 CONTENT AREA */}
+    {/* 📝 CONTENT AREA: Tetap pake p-6 buat teksnya */}
     <div className="p-6 text-left">
-      <h3 className="text-lg font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+      <h3 className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
         {project.title}
       </h3>
 
