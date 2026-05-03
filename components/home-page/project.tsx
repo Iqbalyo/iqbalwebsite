@@ -98,29 +98,23 @@ const Project = () => {
               const finalLink = isProject ? project.link : DEFAULT_CERT_LINK;
 
               return (
-              <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
-  {/* 
-      CARD: 
-      - shadow-sm untuk bayangan dasar
-      - border-slate-100 biar warnanya gak terlalu kontras
-      - hover:shadow-2xl dengan shadow-blue-500/10 biar ada kesan 'glow' fintech pas di-hover
-  */}
+        <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
+  {/* Card utama dengan overflow-hidden agar gambar yang nempel ke atas otomatis terpotong sudutnya */}
   <div className="group h-full overflow-hidden rounded-[24px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10">
     
-    {/* 📸 IMAGE AREA: Padding lebih besar (p-4) biar bener-bener kelihatan floating */}
-    <div className="p-4">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-slate-50">
-        <Image
-          src={project.image}
-          fill
-          alt={project.title}
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-        />
-      </div>
+    {/* 📸 IMAGE AREA: Hapus Padding (p-4) agar nempel ke pinggir atas, kiri, dan kanan */}
+    <div className="relative aspect-video w-full overflow-hidden">
+      <Image
+        src={project.image}
+        fill
+        alt={project.title}
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
+        // object-cover memastikan gambar memenuhi seluruh kotak tanpa ada background abu-abu
+      />
     </div>
 
     {/* 📝 CONTENT AREA */}
-    <div className="px-6 pb-6 pt-2 text-left">
+    <div className="p-6 text-left">
       <h3 className="text-lg font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
         {project.title}
       </h3>
@@ -129,7 +123,7 @@ const Project = () => {
         {project.description}
       </p>
 
-      {/* Tech Badges: Warna lebih soft (slate-50) biar gak balapan sama judul */}
+      {/* Tech Badges */}
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tech.map((tech, i) => (
           <span
