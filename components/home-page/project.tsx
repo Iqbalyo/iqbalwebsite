@@ -98,36 +98,43 @@ const Project = () => {
               const finalLink = isProject ? project.link : DEFAULT_CERT_LINK;
 
               return (
-               <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
-  <div className="group h-full overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+              <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
+  {/* 
+      CARD: 
+      - shadow-sm untuk bayangan dasar
+      - border-slate-100 biar warnanya gak terlalu kontras
+      - hover:shadow-2xl dengan shadow-blue-500/10 biar ada kesan 'glow' fintech pas di-hover
+  */}
+  <div className="group h-full overflow-hidden rounded-[24px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10">
     
-    {/* 📸 IMAGE AREA: Dikasih p-3 (padding) biar ada jarak dari border card */}
-    <div className="p-3">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100 border">
+    {/* 📸 IMAGE AREA: Padding lebih besar (p-4) biar bener-bener kelihatan floating */}
+    <div className="p-4">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-slate-50">
         <Image
           src={project.image}
           fill
           alt={project.title}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
       </div>
     </div>
 
-    {/* 📝 CONTENT AREA: Tetap p-6 tapi pt-2 biar gak terlalu jauh sama gambar */}
-    <div className="p-6 pt-2 text-left">
-      <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+    {/* 📝 CONTENT AREA */}
+    <div className="px-6 pb-6 pt-2 text-left">
+      <h3 className="text-lg font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
         {project.title}
       </h3>
 
-      <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+      <p className="mt-2 text-sm leading-relaxed text-slate-500 line-clamp-2">
         {project.description}
       </p>
 
+      {/* Tech Badges: Warna lebih soft (slate-50) biar gak balapan sama judul */}
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tech.map((tech, i) => (
           <span
             key={i}
-            className="text-[10px] uppercase tracking-wider font-semibold bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
+            className="text-[10px] uppercase tracking-widest font-bold bg-slate-50 text-slate-500 border border-slate-100 px-2.5 py-1 rounded-lg"
           >
             {tech}
           </span>
@@ -138,9 +145,12 @@ const Project = () => {
         href={finalLink as string}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-5 inline-flex items-center text-xs font-bold !text-blue-500 hover:gap-2 transition-all"
+        className="mt-6 inline-flex items-center text-xs font-bold tracking-wider !text-blue-600 hover:gap-3 transition-all"
       >
-        {isProject ? "Lihat Project" : "Lihat Sertifikat"} <span className="ml-1">→</span>
+        {isProject ? "LIHAT PROYEK" : "LIHAT SERTIFIKAT"} 
+        <span className="ml-1.5 bg-blue-50 p-1 rounded-full group-hover:bg-blue-100 transition-colors">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </span>
       </Link>
     </div>
   </div>
