@@ -56,14 +56,14 @@ const PROJECTS = [
   {
     title: "Public Speaking Class",
     image: "/pub.jpg",
-    description: "Pembelajara kegiatan public speaking.",
+    description: "Pembelajaran public speaking.",
     tech: ["Communication"],
   },
 ];
 
 const Project = () => {
   // 🔥 Ganti link ini ke LinkedIn atau Drive sertifikat lu
-  const DEFAULT_CERT_LINK = "https://www.linkedin.com/in/iqbalmustakim/details/certifications/";
+  const DEFAULT_CERT_LINK = "https://drive.google.com/drive/folders/14PiFSwPv9cKvDXBwMqYork8s35tesU-U?usp=drive_link";
 
   const [emblaRef] = useEmblaCarousel(
     { 
