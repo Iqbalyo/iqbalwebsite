@@ -138,7 +138,7 @@ const Project = () => {
                         rel="noopener noreferrer"
                         className="mt-5 inline-flex items-center text-xs font-bold !text-blue-500 hover:gap-2 transition-all"
                       >
-                        {isProject ? "VIEW PROJECT" : "VIEW CERTIFICATE"} <span className="ml-1">→</span>
+                        {isProject ? "Lihat Project" : "Lihat Sertifikat"} <span className="ml-1">→</span>
                       </Link>
                     </div>
                   </div>
