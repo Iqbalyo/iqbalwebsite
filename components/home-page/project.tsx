@@ -36,7 +36,7 @@ const PROJECTS = [
     tech: ["Computational Thinking", "Core concept"],
   },
   {
-    title: "Front Web Developer Expert.",
+    title: "Front End Web Developer Expert.",
     image: "/ser2.jpg",
     description: "Pembelajaran mengembangkan website yg optimal,responsif,memiliki akseblitas yg baik.",
     tech: ["Mobile first", "Automation Testing", "Web Performance"],
