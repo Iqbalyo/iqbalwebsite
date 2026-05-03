@@ -44,9 +44,9 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <h5 className="font-bold text-sm md:text-base">Contact</h5>
               <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <a href="https://wa.me/6282211933095" target="_blank" className="hover:underline hover:text-foreground transition-all">WhatsApp</a>
-                <a href="mailto:mustakimiqbal@gmail.com" className="hover:underline hover:text-foreground transition-all">Email</a>
-                <a href="https://github.com/iqbalmustakim" target="_blank" className="hover:underline hover:text-foreground transition-all">GitHub</a>
+                <a href="https://wa.me/6283157725992" target="_blank" className="hover:underline hover:text-foreground transition-all">WhatsApp</a>
+                <a href="mailto:iqbalmustakimi734@gmail.com" className="hover:underline hover:text-foreground transition-all">Email</a>
+                <a href="https://github.com/Iqbalyo" target="_blank" className="hover:underline hover:text-foreground transition-all">GitHub</a>
                 <a href="https://www.linkedin.com/in/iqbalmustakim" target="_blank" className="hover:underline hover:text-foreground transition-all">LinkedIn</a>
               </div>
             </div>
