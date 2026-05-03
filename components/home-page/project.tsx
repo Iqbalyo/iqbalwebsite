@@ -98,24 +98,23 @@ const Project = () => {
               const finalLink = isProject ? project.link : DEFAULT_CERT_LINK;
 
               return (
-       <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
-  {/* Container utama harus punya overflow-hidden biar gambar yang nempel ke atas terpotong radiusnya */}
-  <div className="group h-full overflow-hidden rounded-[24px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10">
+      <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
+  <div className="group h-full overflow-hidden rounded-[24px] border border-slate-100 bg-white shadow-sm transition-all duration-500 hover:shadow-xl">
     
-    {/* 📸 IMAGE AREA: Hapus semua padding (p-3/p-4) agar gambar nempel ke atas, kiri, dan kanan */}
-    <div className="relative aspect-video w-full overflow-hidden">
+    {/* 📸 IMAGE AREA: Mengunci ukuran agar semua gambar seragam */}
+    <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
       <Image
         src={project.image}
         fill
         alt={project.title}
         className="object-cover transition-transform duration-700 group-hover:scale-110"
-        // object-cover hukumnya WAJIB bre biar gambar lu nge-zoom dikit buat nutupin area putih itu
+        sizes="(max-width: 768px) 300px, 370px"
       />
     </div>
 
-    {/* 📝 CONTENT AREA: Tetap pake p-6 buat teksnya */}
+    {/* 📝 CONTENT AREA */}
     <div className="p-6 text-left">
-      <h3 className="text-xl font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+      <h3 className="text-lg font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
         {project.title}
       </h3>
 
@@ -139,11 +138,13 @@ const Project = () => {
         href={finalLink as string}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-flex items-center text-xs font-bold tracking-wider !text-blue-600 hover:gap-3 transition-all"
+        className="mt-6 inline-flex items-center text-xs font-bold !text-blue-600 hover:gap-3 transition-all"
       >
         {isProject ? "LIHAT PROYEK" : "LIHAT SERTIFIKAT"} 
         <span className="ml-1.5 bg-blue-50 p-1 rounded-full group-hover:bg-blue-100 transition-colors">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14m-7-7 7 7-7 7"/>
+          </svg>
         </span>
       </Link>
     </div>
