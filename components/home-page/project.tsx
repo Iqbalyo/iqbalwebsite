@@ -98,51 +98,53 @@ const Project = () => {
               const finalLink = isProject ? project.link : DEFAULT_CERT_LINK;
 
               return (
-                <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
-                  <div className="group h-full overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
-                    
-                    {/* 📸 IMAGE AREA: Edge-to-edge dengan aspec ratio 4/3 biar mepet mentok */}
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
-                      <Image
-                        src={project.image}
-                        fill
-                        alt={project.title}
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
+               <div key={index} className="flex-[0_0_300px] md:flex-[0_0_370px] min-w-0 pl-4">
+  <div className="group h-full overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:shadow-xl">
+    
+    {/* 📸 IMAGE AREA: Dikasih p-3 (padding) biar ada jarak dari border card */}
+    <div className="p-3">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100 border">
+        <Image
+          src={project.image}
+          fill
+          alt={project.title}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+    </div>
 
-                    {/* 📝 CONTENT AREA */}
-                    <div className="p-6 text-left">
-                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
-                        {project.title}
-                      </h3>
+    {/* 📝 CONTENT AREA: Tetap p-6 tapi pt-2 biar gak terlalu jauh sama gambar */}
+    <div className="p-6 pt-2 text-left">
+      <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+        {project.title}
+      </h3>
 
-                      <p className="mt-2 text-sm text-gray-600 line-clamp-2">
-                        {project.description}
-                      </p>
+      <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+        {project.description}
+      </p>
 
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {project.tech.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="text-[10px] uppercase tracking-wider font-semibold bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {project.tech.map((tech, i) => (
+          <span
+            key={i}
+            className="text-[10px] uppercase tracking-wider font-semibold bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
 
-                      <Link
-                        href={finalLink as string}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-5 inline-flex items-center text-xs font-bold !text-blue-500 hover:gap-2 transition-all"
-                      >
-                        {isProject ? "Lihat Project" : "Lihat Sertifikat"} <span className="ml-1">→</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+      <Link
+        href={finalLink as string}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-5 inline-flex items-center text-xs font-bold !text-blue-500 hover:gap-2 transition-all"
+      >
+        {isProject ? "Lihat Project" : "Lihat Sertifikat"} <span className="ml-1">→</span>
+      </Link>
+    </div>
+  </div>
+</div>
               );
             })}
           </div>
