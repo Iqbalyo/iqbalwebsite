@@ -13,7 +13,7 @@ const PROJECTS = [
   {
     title: "Aplikasi Tryout Online",
     image: "/lory.jpg",
-    link: "https://fe-deploy-olive.vercel.app/login",
+    link: "http://lorytry.infinityfreeapp.com",
     description: "Platform latihan soal interaktif untuk persiapan ujian cpns.",
     tech: ["Laravel 10", "Tailwind"],
   },
